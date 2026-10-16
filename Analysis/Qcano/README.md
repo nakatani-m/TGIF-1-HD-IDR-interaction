@@ -104,6 +104,16 @@ Log file summarizing parameter modifications.
 
 ---
 
+## Notes
+
+The files in the `output/` directory were generated from the phosphorylated model analyzed in this study.
+
+The workflow itself can be applied to other systems by modifying the input files and iteration settings.
+
+The iteration numbers and file paths in `prep_next_qraw.bash` correspond to the phosphorylated model used in this work.
+
+---
+
 ## External Dependencies
 
 The following tools are not included in this repository:
