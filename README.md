@@ -54,7 +54,7 @@ Files shared between both systems.
 
 Examples:
 
-- `params.dat`
+- `params.dat`: reaction coordinate definition used in VcMD simulations
 - force-field related `.itp` files
 
 #### pIDR-HD/
