@@ -116,10 +116,11 @@ The iteration numbers and file paths in `prep_next_qraw.bash` correspond to the 
 
 ## External Dependencies
 
-The following tools are not included in this repository:
+The following external scripts are required but are not included in this repository.
+
+### OmegaGene toolkit
 
 - `vcmd_sum_qraw_is.py`
-- `qcano_szfit`
 - `kkstruct.py`
 - `kkpdb.py`
 - `kkmdconf.py`
@@ -127,6 +128,14 @@ The following tools are not included in this repository:
 Available from:
 
 https://github.com/kotakasahara/omegagene/tree/master/toolkit
+
+### qcano_szfit
+
+- `qcano_szfit`
+
+Available from:
+
+https://github.com/kotakasahara/omegagene/tree/master/vcmd/qcano_szfit
 
 ---
 
