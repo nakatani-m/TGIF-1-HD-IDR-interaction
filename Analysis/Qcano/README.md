@@ -36,6 +36,12 @@ Functions:
 ### `merge_vcmd_qraw.py`
 
 Merges qraw data and generates updated VcMD parameters.
+Modified version of the original merge_vcmd_qraw.py script.
+
+The original script is available from:
+https://github.com/kotakasahara/omegagene/tree/master/toolkit
+
+This version contains modifications used in the present study.
 
 Outputs:
 
