@@ -39,6 +39,8 @@ Main execution script.
 
 PCA calculation script.
 
+This script was originally developed by a former member of the laboratory.
+
 This script:
 
 - reads trajectory data
