@@ -13,10 +13,12 @@ Scripts used for trajectory analysis.
 #### PCA/
 
 Principal component analysis (PCA) based on HD-IDR distance coordinates.
+Part of the workflow was adapted from the [OMEGAGENE analysis tools]().
 
 #### Qcano/
 
 Canonical distribution reconstruction and parameter updates for subsequent VcMD iterations.
+The Qcano reconstruction procedure follows the approach implemented in [OMEGAGENE]().
 
 #### dbscan.py
 
