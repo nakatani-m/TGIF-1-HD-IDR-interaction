@@ -12,7 +12,7 @@ GMX=/gs/bs/hp170025/application/gromacs-2022.6-plumed/bin
 ############################################################
 
 # [1] Continue from the previous iteration
-${GMX}/gmx_mpi grompp  -f ../run.mdp -c  ../../../npt_1000_Parrinello-Rahman/n1/posre.gro  -p ../../../top_1000/complex_P_before_md1.top  -o run.tpr
+${GMX}/gmx_mpi grompp  -f ../run.mdp -c  ../../../npt_1000_Parrinello-Rahman/n1/posre.gro  -p ../../../top_1000/md.top  -o run.tpr
 
 # [2] Continue from the previous iteration
 ##${GMX}/gmx_mpi grompp  -f ../run.mdp -c  ../../../init/3/n1/run.gro  -p ../../../sys/complex_P_02.top  -o run.tpr
