@@ -32,10 +32,10 @@ structure IDP_P_Min.pdb
   inside box 51.8 0.0 0.0 103.6 103.6 103.6
 end structure
 
-#structure spc.pdb
-#  number 40000
-#  inside box 0. 0. 0. 103.6/ 103.6/ 103.6/
-#end structure
+structure spc.pdb
+  number 40000
+  inside box 0. 0. 0. 103.6/ 103.6/ 103.6/
+end structure
 EOF
 
 done
