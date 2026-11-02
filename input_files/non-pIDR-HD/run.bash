@@ -1,16 +1,4 @@
 #!/bin/bash
-#$ -S /bin/bash
-#$ -l h_rt=02:00:00
-#$ -l node_o=1
-#$ -cwd
-
-module load  openmpi/5.0.2-gcc
-module load cuda/12.1.0
-# New plumd procedure.
-export OMP_NUM_THREADS=24
-export LD_LIBRARY_PATH=/gs/bs/hp170025/application/plumed/lib:${LD_LIBRARY_PATH}
-GMX=/gs/bs/hp170025/application/gromacs-2022.6-plumed/bin
-############################################################
 
 # [1] NVT ensemble
 ${GMX}/gmx_mpi grompp  -f ../run.mdp -c  ../../../npt_1000_Parrinello-Rahman/n1/posre.gro  -p ../../../top_1000/md.top  -o run.tpr
