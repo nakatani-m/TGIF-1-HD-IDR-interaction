@@ -10,14 +10,10 @@ module load cuda/12.1.0
 export OMP_NUM_THREADS=24
 export LD_LIBRARY_PATH=/gs/bs/hp170025/application/plumed/lib:${LD_LIBRARY_PATH}
 GMX=/gs/bs/hp170025/application/gromacs-2022.6-plumed/bin
-#export LD_LIBRARY_PATH=/gs/bs/hp170025/mur/app/VcMD/VcMD-plumed2-2.9.0/lib:${LD_LIBRARY_PATH}
-#GMX=/gs/bs/hp170025/mur/app/gromacs/gromacs-2022.6-plumed/bin
 ############################################################
 
-# FN_INIT=../../../cal02_minim/minim.gro
-
 # [1] NVT ensemble
-${GMX}/gmx_mpi grompp  -f ../run.mdp -c  ../../../npt_1000_Parrinello-Rahman/n1/posre.gro  -p ../../../top_1000/complex_nonP_before_md1.top  -o run.tpr
+${GMX}/gmx_mpi grompp  -f ../run.mdp -c  ../../../npt_1000_Parrinello-Rahman/n1/posre.gro  -p ../../../top_1000/md.top  -o run.tpr
 
 # [2] Iteration 2 (Continue from the previous iteration)
 ##${GMX}/gmx_mpi grompp  -f ../run.mdp -c  ../../0/n1/run.gro  -p ../../../top_1000/complex_nonP_before_md1.top  -o run.tpr
@@ -26,6 +22,6 @@ ${GMX}/gmx_mpi grompp  -f ../run.mdp -c  ../../../npt_1000_Parrinello-Rahman/n1/
 ##${GMX}/gmx_mpi grompp  -f ../run.mdp -c  ../../0/next_conf/n1/run.gro  -p ../../../top_1000/complex_nonP_before_md1.top  -o run.tpr
  
 
-${GMX}/gmx_mpi mdrun  -deffnm run  -plumed ../plumed.dat #  -cpi ../../0/n1/run.cpt -noappend 
+${GMX}/gmx_mpi mdrun  -deffnm run  -plumed ../plumed.dat 
 
 
