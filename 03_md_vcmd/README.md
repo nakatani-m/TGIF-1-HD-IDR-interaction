@@ -50,12 +50,6 @@ Files shared among all simulations.
 
 Definition of the reaction-coordinate space used in mD-VcMD simulations.
 
-This file determines:
-
-- reaction coordinate dimensions
-- state boundaries
-- VcMD state assignments
-
 ---
 
 ## pIDR-HD/
