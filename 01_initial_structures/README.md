@@ -124,18 +124,6 @@ This script:
 
 ---
 
-## Representative Files
-
-### posre.gro
-
-Representative equilibrated structure used as an example of a generated initial configuration.
-
-### state.dat
-
-Representative state assignment file used in the subsequent mD-VcMD simulations.
-
----
-
 ## Notes
 
 The actual simulations were performed using 1000 independently generated initial configurations for each system.
