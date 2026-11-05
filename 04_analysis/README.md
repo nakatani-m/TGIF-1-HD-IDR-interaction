@@ -55,7 +55,7 @@ The PCA calculations were performed using HD-IDR intermolecular distance coordin
 
 Part of the workflow was adapted from:
 
-- Omegagene Toolkit
+- [Omegagene Toolkit](https://github.com/kotakasahara/omegagene/tree/master/toolkit)
 
 The generated PCA coordinates were subsequently used for DBSCAN clustering.
 
@@ -95,8 +95,8 @@ The reconstructed canonical distribution was used for:
 
 This workflow was performed using:
 
-- Omegagene Toolkit
-- Omegagene Qcano (`qcano_szfit`)
+- [Omegagene Toolkit](https://github.com/kotakasahara/omegagene/tree/master/toolkit)
+- [Omegagene Qcano (qcano_szfit)](https://github.com/kotakasahara/omegagene/tree/master/vcmd/qcano_szfit)
 
 ---
 
