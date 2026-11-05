@@ -1,8 +1,7 @@
 #!/bin/sh
 ##HD
 #01 get pdb
-cat 6fqp.pdb | grep "ATOM  " | grep -v "REMARK" | grep
-" A " > 6fqp_edit_01.pdb
+cat 6fqp.pdb | grep "ATOM  " | grep -v "REMARK" | grep " A " > 6fqp_edit_01.pdb
 
 #02 modeller
 cat rcsb_pdb_6FQP.fasta | sed -n 4p |
@@ -20,8 +19,7 @@ echo " " >> unknownStructure.pir
 cat rcsb_pdb_6FQP.fasta | sed -n 4p |
 awk 'BEGIN{
         printf ">P1;REFERENCE\n"
-        printf "structure:6fqp_modeller_inp:5:A:71:A:::
-:\n"
+        printf "structure:6fqp_modeller_inp:5:A:71:A::::\n"
 }{
         gsub("GPMDIPLDLSSSAGSGKRRR","----",$0)
         gsub("NQFTISRRGAKISE","",$0)
@@ -40,8 +38,7 @@ awk 'BEGIN{
         #print bef_num
         #print num
         #print $0
-        printf "%s%4d%s\n",substr($0,1,22),nai_start,su
-bstr($0,27,54)
+        printf "%s%4d%s\n",substr($0,1,22),nai_start,substr($0,27,54)
         bef_num=num
 
 }' > 6fqp_modeller_inp.pdb
@@ -60,8 +57,7 @@ class MyModel(automodel):
                 rsr = self.restraints
                 at = self.atoms
                 rsr.rigid_bodies.append(rigid_body(
-                selection(a.residue_range('5:A', '71:A'
-)) ))
+                selection(a.residue_range('5:A', '71:A')) ))
 
 
 env = environ()
@@ -70,8 +66,7 @@ a = MyModel(env,
               alnfile        = 'unknownStructure.pir',
               knowns         = 'REFERENCE',
               sequence       = '6fqp_model',
-              assess_methods = (assess.DOPE, assess.GA3
-41)
+              assess_methods = (assess.DOPE, assess.GA341)
              )
 
 a.starting_model = 1
@@ -82,8 +77,7 @@ EOF
 mod10.5 use_modeller.py
 
 
-selectd_model=`cat use_modeller.log | grep pdb | sort -
-k 3n | head -n 1 | awk '{print $1}'`
+selectd_model=`cat use_modeller.log | grep pdb | sort -k 3n | head -n 1 | awk '{print $1}'`
 echo ${selectd_model}
 
 cat ${selectd_model} | grep "ATOM  " | grep -v "OXT" |
@@ -96,8 +90,7 @@ awk 'BEGIN{
         #print std_num
         #print residue
         #print $0
-        printf "%s%4d%s\n",substr($0,1,22),no_structure
-,substr($0,27,54)
+        printf "%s%4d%s\n",substr($0,1,22),no_structure,substr($0,27,54)
         std_num = residue
 
 }' > 6fqp_modeller_oup.pdb
@@ -108,12 +101,10 @@ from pymol import editor, cmd
 
 cmd.load('6fqp_modeller_oup.pdb')
 
-cmd.select('N_term',  '(chain A and resi 164) and name
-N ')
+cmd.select('N_term',  '(chain A and resi 164) and name N ')
 editor.attach_amino_acid('N_term', 'ACE')
 
-cmd.select('C_term',  '(chain A and resi 234) and name
-C')
+cmd.select('C_term',  '(chain A and resi 234) and name C')
 editor.attach_amino_acid('C_term', 'NME')
 
 
@@ -123,15 +114,12 @@ EOF
 
 /Applications/PyMOL.app/Contents/MacOS/python cap.py
 
-cat cappedchain.pdb | grep -v "TER" > cappedchain_02.pd
-b
+cat cappedchain.pdb | grep -v "TER" > cappedchain_02.pdb
 #03 tleap
 cat <<- EOF > tleap.in
-source /Users/madoka/Apps/AMBER/amber22/dat/leap/cmd/ol
-dff/leaprc.ff99SB
+source /Users/madoka/Apps/AMBER/amber22/dat/leap/cmd/oldff/leaprc.ff99SB
 chainA = loadpdb  cappedchain_02.pdb
-saveamberparm chainA 6fqp_after_tleap.prmtop 6fqp_after
-_tleap.inpcrd
+saveamberparm chainA 6fqp_after_tleap.prmtop 6fqp_after_tleap.inpcrd
 quit
 EOF
 
@@ -182,8 +170,7 @@ cat <<- EOF > tleap.in
 source ${AMBERHOME}/dat/leap/cmd/leaprc.protein.ff14SB
 source ${AMBERHOME}/dat/leap/cmd/leaprc.phosaa14SB
 chainA = sequence { ${SEQ} }
-saveamberparm chainA IDP_P_after_tleap.prmtop IDP_P_aft
-er_tleap.inpcrd
+saveamberparm chainA IDP_P_after_tleap.prmtop IDP_P_after_tleap.inpcrd
 savepdb chainA IDP_P_after_tleap.pdb
 quit
 EOF
@@ -206,9 +193,7 @@ Minimize
  /
 EOF
 
-sander -O -i Min.in -o Min.out -p IDP_P_after_tleap.prm
-top -c IDP_P_after_tleap.inpcrd -r IDP_P_Min.rst -inf M
-in.mdinfo
+sander -O -i Min.in -o Min.out -p IDP_P_after_tleap.prmtop -c IDP_P_after_tleap.inpcrd -r IDP_P_Min.rst -inf Min.mdinfo
 
 #09 binary to pdb
 cat <<- EOF > cpptraj.in

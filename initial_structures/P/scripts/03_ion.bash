@@ -1,5 +1,5 @@
 #!/bin/bash
-for i in {6..1000}; do
+for i in {1..1000}; do
 #01 make box
 gmx editconf -f PDBS/6fqp_P_in_water_n${i}.pdb -o GROS/complex_P_in_water_n${i}.gro -box 10.36 10.36 10.36
 
