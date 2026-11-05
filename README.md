@@ -197,7 +197,7 @@ Files include:
 
 Part of the workflow was adapted from:
 
-- Omegagene Toolkit
+- [Omegagene Toolkit](https://github.com/kotakasahara/omegagene/tree/master/toolkit)
 
 #### Qcano/
 
@@ -216,8 +216,8 @@ Files include:
 
 This workflow was performed using tools from:
 
-- Omegagene Toolkit
-- Omegagene Qcano (`qcano_szfit`)
+- [Omegagene Toolkit](https://github.com/kotakasahara/omegagene/tree/master/toolkit)
+- [Omegagene Qcano (qcano_szfit)](https://github.com/kotakasahara/omegagene/tree/master/vcmd/qcano_szfit)
 
 #### DBSCAN/
 
