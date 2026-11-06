@@ -11,7 +11,7 @@ Two systems were analyzed throughout this study:
 
 ## Repository Structure
 
-### 01_initial_structures/
+### [01_initial_structures](https://github.com/nakatani-m/TGIF-1-HD-IDR-interaction/blob/main/01_initial_structures/README.md)/
 
 Files used to construct the initial simulation systems.
 
@@ -59,7 +59,7 @@ Scripts used for system preparation.
 
 ---
 
-### 02_equilibration/
+### [02_equilibration](https://github.com/nakatani-m/TGIF-1-HD-IDR-interaction/blob/main/02_equilibration/README.md)/
 
 Files used for energy minimization and equilibration before mD-VcMD simulations.
 
@@ -96,7 +96,7 @@ Execution scripts for the equilibration workflow.
 
 ---
 
-### 03_md_vcmd/
+### [03_md_vcmd](https://github.com/nakatani-m/TGIF-1-HD-IDR-interaction/blob/main/03_md_vcmd/README.md)/
 
 Input files and representative examples used for mD-VcMD simulations.
 
@@ -182,7 +182,7 @@ Files include:
 
 ---
 
-### 04_analysis/
+### [04_analysis](https://github.com/nakatani-m/TGIF-1-HD-IDR-interaction/blob/main/04_analysis/README.md)/
 
 Scripts used for trajectory analysis.
 
@@ -249,7 +249,7 @@ Cluster labels were reassigned according to cluster population size:
 
 ---
 
-### 05_clustered_structure/
+### [05_clustered_structure](https://github.com/nakatani-m/TGIF-1-HD-IDR-interaction/blob/main/05_clustered_structure/README.md)/
 
 Representative structures used for structural analysis and discussion.
 
