@@ -326,4 +326,4 @@ The complete dataset associated with this study, including:
 
 is available on Zenodo:
 
-[Supporting Dataset for TGIF-1 HD-IDR Interaction Simulations](https://doi.org/XXXXXXXXXX)
+[Supporting Dataset for TGIF-1 HD-IDR Interaction Simulations](https://doi.org/10.5281/zenodo.23982610)
